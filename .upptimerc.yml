@@ -1,31 +1,26 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Upptime configuration for the public status page (Build plan I7; design
+# doc, "Independence rule": the status page lives on GitHub, not AWS).
+# This file is the source; it's copied into the rparelius/area0-status
+# repository, made from the upptime/upptime template (README.md here).
+owner: rparelius
+repo: area0-status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Web app (dev)
+    url: https://d3uausgfzyi2fu.cloudfront.net/
+  - name: API (dev)
+    url: https://d3uausgfzyi2fu.cloudfront.net/v1/tenants/lookup?slug=acme
+  - name: Query API (dev)
+    url: https://d3uausgfzyi2fu.cloudfront.net/metrics/api/v1/query
+    expectedStatusCodes:
+      - 401
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  # Until status.area0.co points here (a CNAME in envs/org).
+  baseUrl: /area0-status
+  name: Area0 status
+  introTitle: "**Area0** service status"
+  introMessage: Checked every five minutes from GitHub, outside our own infrastructure. Pages are sent separately, from our monitoring account.
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
