@@ -7,11 +7,13 @@ repo: area0-status
 
 sites:
   - name: Web app (dev)
-    url: https://d3uausgfzyi2fu.cloudfront.net/
+    url: https://app.dev.area0.co/
   - name: API (dev)
-    url: https://d3uausgfzyi2fu.cloudfront.net/v1/tenants/lookup?slug=acme
+    url: https://app.dev.area0.co/v1/tenants/lookup?slug=acme
+  - name: Sign-in (dev)
+    url: https://auth.app.dev.area0.co/auth/realms/tenant-bf484197-176f-4e02-b65c-c431898974b3/.well-known/openid-configuration
   - name: Query API (dev)
-    url: https://d3uausgfzyi2fu.cloudfront.net/metrics/api/v1/query
+    url: https://acme.app.dev.area0.co/metrics/api/v1/query
     expectedStatusCodes:
       - 401
 
