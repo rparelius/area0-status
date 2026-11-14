@@ -1,7 +1,7 @@
-url: https://d3uausgfzyi2fu.cloudfront.net/metrics/api/v1/query
+url: https://acme.app.dev.area0.co/metrics/api/v1/query
 status: up
 code: 401
-responseTime: 300
-lastUpdated: 2026-11-13T03:08:49.494Z
+responseTime: 409
+lastUpdated: 2026-11-14T02:26:39.029Z
 startTime: 2026-11-12T17:39:10.730Z
 generator: Upptime <https://github.com/upptime/upptime>
